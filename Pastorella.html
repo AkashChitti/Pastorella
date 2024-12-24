@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Merriweather:wght@300&display=swap" rel="stylesheet">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>PASTORELLA - Authentic Italian Pasta</title>
@@ -13,8 +13,8 @@
         }
 
         body {
-            font-family: 'Arial', sans-serif;
-            background-color: #000;
+            font-family: 'Merriweather', serif;
+            background: linear-gradient(135deg, #000, #333);
             color: #fff;
             line-height: 1.6;
         }
@@ -25,15 +25,9 @@
         }
 
         header h1 {
-            
             font-size: 3.5rem;
             color: #FFD700;
         }
-
-        header h2 {
-            color: #FFD700;
-        }
-
 
         header p {
             font-size: 1.5rem;
@@ -42,19 +36,19 @@
         }
 
         .tagline {
-            font-size: 1.2rem; /* Adjusted font size for the tagline */
-            font-family: 'Trebuchet MS', sans-serif;
-            color: #e0e0e0; /* Same color for consistency */
-            margin-top: 15px; /* Space above tagline */
-            padding: 0 20px; /* More padding on left and right */
-            text-align: center; /* Center align */
-            line-height: 1.5; /* Adjust line height for better spacing */
+            font-size: 1.2rem;
+            margin-top: 15px;
+            padding: 0 20px;
+            text-align: center;
+            line-height: 1.5;
         }
 
-        /* Navigation Bar */
         nav {
             background-color: #333;
             padding: 15px;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
             text-align: center;
         }
 
@@ -63,10 +57,11 @@
             text-decoration: none;
             margin: 0 15px;
             font-size: 1.2rem;
+            transition: color 0.3s;
         }
 
         nav a:hover {
-            color: #f1ee05;
+            color: #FFD700;
         }
 
         .container {
@@ -76,7 +71,6 @@
             padding: 20px 0;
         }
 
-        /* Updated About Us Section */
         .about-container {
             display: flex;
             justify-content: space-between;
@@ -87,7 +81,7 @@
 
         .about-box {
             width: 45%;
-            background-color: #333;
+            background-color: rgba(51, 51, 51, 0.8);
             padding: 20px;
             border-radius: 10px;
             color: #fff;
@@ -95,21 +89,15 @@
 
         .about-box h2 {
             font-size: 2.5rem;
-            color:#FFD700 ;
+            color: #FFD700;
             margin-bottom: 15px;
-            font-family: 'Trebuchet MS', sans-serif;
         }
 
         .about-box p {
             font-size: 1.2rem;
             line-height: 1.8;
-            font-family: 'Trebuchet MS', sans-serif;
-        }
-        section.about.container {
-            margin-top: 0px; /* Reduced margin */
         }
 
-        /* Image Slider */
         .image-slider {
             width: 45%;
             position: relative;
@@ -133,19 +121,15 @@
             66% { transform: translateX(-200%); }
         }
 
-        /* Menu Section */
         .menu {
-    text-align: center; /* Centers the menu heading */
-    margin: 50px auto; /* Vertical spacing for the menu section and auto for horizontal centering */
-    padding: 20px 0; /* Increased padding for spacing */
-    width: 100%; /* Ensures the menu section takes full width */
-}
+            text-align: center;
+            margin: 50px auto;
+            padding: 20px 0;
+        }
 
         .menu h2 {
             font-size: 2.5rem;
-            color:#FFD700 ;
-            text-align: center;
-            font-family: 'Trebuchet MS', sans-serif;
+            color: #FFD700;
         }
 
         .menu-items {
@@ -190,7 +174,7 @@
         }
 
         .menu-item-back {
-            background-color: #333;
+            background-color: rgba(51, 51, 51, 0.9);
             color: #fff;
             padding: 20px;
             transform: rotateY(180deg);
@@ -212,8 +196,35 @@
             text-align: center;
         }
 
+	.beverage-section {
+            text-align: center;
+            margin: 50px auto;
+            padding: 20px 0;
+        }
 
-        /* Footer Section */
+        .beverage-section h2 {
+            font-size: 2.5rem;
+            color: #FFD700;
+            margin-bottom: 20px;
+        }
+
+        .beverage-items {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+        }
+
+        .beverage-item {
+            width: 45%;
+            margin: 15px 0;
+        }
+
+        .beverage-item img {
+            width: 100%;
+            height: auto;
+            border-radius: 10px;
+        }
+
         footer {
             background-color: #111;
             padding: 20px 0;
@@ -227,77 +238,14 @@
         }
 
         footer a {
-            color: #f7df09;
+            color: #FFD700;
             text-decoration: none;
             font-size: 1rem;
-            margin: 0 10px;
         }
 
         footer a:hover {
             text-decoration: underline;
         }
-
-        /* Responsive Styles */
-        @media (max-width: 768px) {
-            .menu-items {
-                flex-direction: column;
-                align-items: center;
-            }
-
-            .menu-item {
-                width: 80%;
-            }
-
-            .about-container {
-                flex-direction: column;
-            }
-
-            .about-box, .image-slider {
-                width: 100%;
-            }
-        }
-
-        @media (max-width: 1200px) {
-            .menu-item {
-                width: 45%;
-            }
-        }
-
-            /* Text Box with Picture Section */
-    .text-box-with-picture {
-        margin-top: 50px;
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        padding: 40px;
-        background-color: #222;
-        border-radius: 10px;
-    }
-
-    .text-box {
-        width: 45%;
-        color: #fff;
-    }
-
-    .text-box h2 {
-        font-size: 2.2rem;
-        margin-bottom: 15px;
-    }
-
-    .text-box p {
-        font-size: 1.2rem;
-        line-height: 1.6;
-    }
-
-    .image-box {
-        width: 45%;
-    }
-
-    .image-box img {
-        width: 100%;
-        border-radius: 10px;
-    }
-
     .beverage-container {
     display: flex;
     justify-content: space-between;
@@ -332,36 +280,53 @@
     margin-right: 10px;
 }
 
+        @media (max-width: 768px) {
+            .menu-items {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .menu-item {
+                width: 80%;
+            }
+
+            .about-container {
+                flex-direction: column;
+            }
+
+            .about-box, .image-slider {
+                width: 100%;
+            }
+        }
     </style>
 </head>
 <body>
-
-
-    <!-- Navigation Bar -->
     <nav>
         <a href="#about">About Us</a>
         <a href="#menu">Our Menu</a>
         <a href="#footer">Contact</a>
     </nav>
 
-    <!-- Header Section -->
     <header>
         <h1>PASTORELLA</h1>
         <p class="tagline">Savor the Essence of Italy with Every Bite! 🍝<br>
             Fork, Feast, Enjoy—order your homemade, authentic Italian pasta today<br>
             and indulge in a culinary experience delivered right to your door!</p>
+<div style="text-align: center; margin-top: 20px;">
+    <p style="font-size: 1.5rem; color: #FFD700; font-weight: bold;">Click below to Order Now</p>
+<a href="https://zomato.onelink.me/xqzv/xaiiegmk" target="_blank">
+    <img src="https://b.zmtcdn.com/images/logo/zomato_flat_bg_logo.svg" alt="Order on Zomato" style="width: 150px; height: auto;">
+</a>
+
     </header>
 
-    <!-- Updated About Us Section -->
-    <section class="about container" id="about" style="margin-top: 10px;">
+    <section class="about container" id="about">
         <div class="about-container">
-            <!-- About Us Text Box -->
             <div class="about-box">
                 <h2>ABOUT US</h2>
                 <p>At Pastorella, we bring the finest, homemade Italian pasta dishes straight to your door. Our cloud kitchen specializes in authentic recipes passed down through generations, ensuring a true taste of Italy with every bite. We use only fresh ingredients to craft each meal with care and tradition.</p>
             </div>
 
-            <!-- Sliding Images Container -->
             <div class="image-slider">
                 <div class="slides">
                     <img src="https://www.stocktake-online.com/hubfs/beta/src/images/industryinsight_sub/cloudkitchen_sub_1.svg" alt="Pasta Dish 1">
@@ -372,23 +337,19 @@
         </div>
     </section>
 
-   <!-- Menu Section -->
-   <section class="menu container" id="menu" style="margin-top: 0px;">
-    <h2>OUR MENU</h2>
-
-    <div class="menu-items">
-        <!-- Menu Item 1 -->
-        <div class="menu-item">
-            <div class="menu-item-inner">
-                <div class="menu-item-front" style="background-image: url('https://princesspinkygirl.com/wp-content/uploads/2024/08/chicken-and-broccoli-penne-alfredo-14SQ1200-500x500.jpg');"></div>
-                <div class="menu-item-back">
-                    <h3>Penne Alfredo Classico</h3>
-                    <p>Penne pasta tossed in a rich, creamy Alfredo sauce with garlic, Italian spices, and a touch of black pepper</p>
+    <section class="menu container" id="menu">
+        <h2>OUR MENU</h2>
+        <div class="menu-items">
+            <div class="menu-item">
+                <div class="menu-item-inner">
+                    <div class="menu-item-front" style="background-image: url('https://princesspinkygirl.com/wp-content/uploads/2024/08/chicken-and-broccoli-penne-alfredo-14SQ1200-500x500.jpg');"></div>
+                    <div class="menu-item-back">
+                        <h3>Penne Alfredo Classico</h3>
+                        <p>₹250<br>Penne pasta tossed in creamy Alfredo sauce with garlic, Italian spices, and black pepper.</p>
+                    </div>
                 </div>
             </div>
-        </div>
-
-        <!-- Menu Item 2 -->
+             <!-- Menu Item 2 -->
         <div class="menu-item">
             <div class="menu-item-inner">
                 <div class="menu-item-front" style="background-image: url('https://img.freepik.com/premium-photo/penne-arrabiata-pasta-with-olive-sauce-served-dish-isolated-table-side-view-middle-east-food_689047-3343.jpg');"></div>
@@ -442,7 +403,7 @@
                 </div>
             </div>
         </div>
-    </div>
+     </div>
 </section>
 
 <section class="beverage-section container" id="beverages" style="margin-top:0px;">
@@ -464,10 +425,11 @@
     </div>
 </section>
 
- <!-- Footer Section -->
     <footer id="footer">
-        <p>Email: nebuladesigns101@gmail.com"</p>
-        <p>Phone Number: +91 8217602701</p>
-        <p>Follow us on Instagram: <a href="https://www.instagram.com/pas.torella" target="_blank">@pastorella</a></p>
+        <p>Email: nebuladesigns101@gmail.com</p>
+        <p>Phone: +91 8217602701</p>
+        <p>Follow us: <a href="https://www.instagram.com/pas.torella" target="_blank">@pastorella</a></p>
         <p>&copy; 2024 Pastorella. All Rights Reserved.</p>
-</footer>
+    </footer>
+</body>
+</html>
